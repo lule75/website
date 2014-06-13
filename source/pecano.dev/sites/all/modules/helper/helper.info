@@ -1,0 +1,4 @@
+name=helper
+description="Modulo de ayuda creado para la pagina PECANO.PE"
+core=7.x
+package=Helper

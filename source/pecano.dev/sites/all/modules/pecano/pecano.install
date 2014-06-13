@@ -1,0 +1,77 @@
+<?php
+
+
+/**
+ * Implements hook_install().
+ */
+function pecano_install() {
+
+  /*
+  $node = node_load(2);
+  db_insert('pecano_user_contenido')
+    ->fields(array(
+        'uid' => 2,
+        'nid' => $node->nid,
+        'titulo' => $node->title,
+        'fecha_apertura' => date('Y-m-d h:m:s'),
+        )
+      )
+    ->execute();
+  */
+}
+/**
+ * Implements hook_schema().
+ */
+function pecano_schema() {
+  $schema['pecano_user_contenido'] = array(
+    'description' => 'Esta tabla almacena los datos de navegacion de los usuarios en el sitio',
+    'fields' => array(
+      'id' => array(
+        'description' => 'La llave primaria de la tabla users.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'uid' => array(
+        'description' => 'Codigo de Usuario',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'nid' => array(
+        'description' => 'Codigo de contenido',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'titulo' => array(
+        'description' => 'Titulo del contenido',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+      ),
+      'fecha_apertura' => array(
+        'description' => 'Fecha de apertura de documento',
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'fecha_cierre' => array(
+        'description' => 'Fecha de cierre de documento',
+        'type' => 'int',
+        'not null' => FALSE,
+      ),
+    ),
+    'foreign keys' => array(
+      'pusco_user' => array(
+        'table' => 'users',
+        'columns' => array('uid' => 'uid'),
+        ),
+      'pusco_node' => array(
+        'table' => 'node',
+        'columns' => array('nid' => 'nid'),
+        ),
+       ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}

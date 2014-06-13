@@ -1,0 +1,294 @@
+<?php
+
+/*
+ *Implements hook_menu.
+ */
+function pecano_menu()
+{
+  $items = array();
+  $items['contenidos-visitados'] = array(
+    'title' => 'Lista de contenidos visitados',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pecano_lista_contenidos_visitados'),
+    'access arguments' => array('access pecano admin'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['admin/pecano-contactos-mail'] = array(
+    'title' => 'Configuracion de correos de contacto',
+    'description' => 'Configuracion de correos de contacto.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pecano_contactos_mail_admin'),
+    'access arguments' => array('access pecano admin'),
+  );
+  return $items;
+}
+
+
+
+/**
+ * formulario administrador para la configuracion de las direcciones de correo.
+ */
+function pecano_contactos_mail_admin() {
+  $form['textfield'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Nombre'),
+    );
+  $form['lista_correos'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Direcciones de correo.'),
+    '#description' => t('Ingrese las direcciones que sean crea convenientes separadas por una coma.'),
+    '#default_value' => variable_get('pecano_list_mail'),
+    );
+  $form['mensaje_alta'] = array(
+    '#type' => 'textarea',
+    '#title' => 'Mensaje a los miembros',
+    '#description' => t('Ingrese un mensaje para informar el alta en esta lista.'),
+    '#default_value' => variable_get('pecano_list_mail_message'),
+    );
+  $sform = system_settings_form($form);
+  $sform['#submit'] = array('pecano_contactos_mail_admin_submit');
+  return $sform;
+}
+/**
+ * Implements hook_form_submit
+ */
+function pecano_contactos_mail_admin_submit($form, &$form_state) {
+  variable_set('pecano_list_mail', $form_state['values']['lista_correos']);
+  variable_set('pecano_list_mail_message', $form_state['values']['mensaje_alta']);
+  pecano_mail_send($form_state, 'admin_consulta');
+}
+
+/*
+ * Formulario para mostrar la lista de contenidos visitados por usuario.
+ */
+function pecano_lista_contenidos_visitados($form){
+  //$result = db_query("select * from {pecano_user_contenido}")->execute();
+  $result = db_select('pecano_user_contenido', 'puc')->fields('puc')->execute();
+  $header = array(
+    array('data' => 'Usuario', 'field' => 'user_name'),
+    array('data' => 'Contenido', 'field' => 'content_title'),
+    array('data' => 'Abrio', 'field' => 'fecha_apertura'),
+    array('data' => 'Cerro', 'field' => 'fecha_cierre'),
+  );
+  foreach ($result as $linea) {
+    $user = user_load($linea->uid);
+    $content = node_load($linea->nid);
+    $rows[] = array(
+      'user_name' => l($user->name? $user->name : "Usuario anonimo", $user->name? "user/" .$user->uid : "" ),
+      'content_title' => l($content->title, "node/" . $content->nid),
+      'fecha_apertura' => date("y/m/d-H:i:s", $linea->fecha_apertura),
+      'fecha_cierre' => empty($linea->fecha_cierre)? date("y/m/d-H:i:s", $linea->fecha_apertura) : date("y/m/d-H:i:s", $linea->fecha_cierre),
+    );
+  }
+  $form['tabla'] = array(
+    '#theme' => 'table',
+    '#header' => $header,
+    '#rows' => $rows,
+    '#empty' => "No hay Resultados",
+  );
+  return $form;
+}
+/**
+ * Implements hook_node_view().
+ */
+function pecano_node_view($node, $view_mode, $langcode) {
+  global $user;
+  $patron_fecha = 'Y-m-d h:i:s';
+  if ($view_mode == 'full') {
+    if (isset($_SESSION['pecano_user_contenido']['preparado'])) {
+      $nid = $_SESSION['pecano_user_contenido']['nid'];
+      $uid = $_SESSION['pecano_user_contenido']['uid'];
+      $titulo = $_SESSION['pecano_user_contenido']['titulo'];
+      $fecha = $_SESSION['pecano_user_contenido']['fecha_apertura'];
+      db_update('pecano_user_contenido')
+        ->fields(array(
+          'fecha_cierre' => time()
+          )
+        )
+        ->condition('uid', $_SESSION['pecano_user_contenido']['uid'])
+        ->condition('nid', $_SESSION['pecano_user_contenido']['nid'])
+        ->condition('titulo', $_SESSION['pecano_user_contenido']['titulo'])
+        ->condition('fecha_apertura', $_SESSION['pecano_user_contenido']['fecha_apertura'])
+        ->execute();
+      unset($_SESSION['pecano_user_contenido']);
+    }
+    db_insert('pecano_user_contenido')
+      ->fields(array(
+          'nid' => $_SESSION['pecano_user_contenido']['nid'] = $node->nid,
+          'uid' => $_SESSION['pecano_user_contenido']['uid'] = $user->uid,
+          'titulo' => $_SESSION['pecano_user_contenido']['titulo'] = $node->title,
+          'fecha_apertura' => $_SESSION['pecano_user_contenido']['fecha_apertura'] = time(),
+        ))
+      ->execute();
+      $_SESSION['pecano_user_contenido']['preparado'] = 1;
+  }
+}
+
+/**
+ * Implemets hook_block_info.
+ */
+function pecano_block_info() {
+    $block['bloque_registro_consulta'] = array(
+        'info' => t('Registrar una nueva consulta.'),
+        'cache' => DRUPAL_NO_CACHE,
+    );
+    return $block;
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function pecano_block_view($delta = '') {
+    $block = array();
+    switch ($delta) {
+        case 'bloque_registro_consulta' :
+            $block['subject'] = t('Boton Editar');
+            $block['content'] = drupal_get_form('pecano_block_registrar');
+            break;
+    }
+    return $block;
+}
+
+/**
+ * Mostrara un formulario para el bloque block_registro_consulta.
+ */
+function pecano_block_registrar($node, $form_state) {
+    $form = array();
+    $form['titulo_consulta'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Titulo de consulta'),
+        '#size' => 20,
+        '#maxlength' => 128,
+        '#required' => true,
+    );
+    $form['contenido_consulta'] = array(
+        '#type' => 'textarea',
+        '#title' => 'Contenido',
+        '#description' => t('Ingrese Uds. su inquietud y gustyamente lo atenderemos.'),
+    );
+    $form['Enviar'] = array(
+        '#type' => 'submit',
+        '#value' => 'Enviar',
+    );
+    global $user;
+    $user_id = $user->uid;
+    return $form;
+}
+
+/**
+ * Implemets hook_form_submit.
+ */
+function pecano_block_registrar_submit(&$form, &$form_state) {
+    global $user;
+    $node = new stdClass();
+    $node->type = 'consulta';
+    $node->uid = $user->uid;
+    $node->title = $form_state['values']['titulo_consulta'];
+    $node->language = 'und';
+    $node->field_consulta_contenido[$node->language][0]['value'] = $form_state['values']['contenido_consulta'];
+    $node->status = 1;
+    $node->revision_timestamp = time();
+    $nid = node_save($node);
+    $form_state['values']['new_nid'] = $node->nid;
+    pecano_mail_send($form_state,'registrar_consulta');
+}
+
+/**
+ * Implements hook_mail().
+ */
+function pecano_mail($key, &$message, $params) {
+  $sub = $params['subject'];
+  $body = $params['body'];
+  $message['subject'] = $sub;
+  $message['body'][] = drupal_html_to_text($body);
+}
+
+/**
+ * Implements hook_mail_send.
+ */
+function pecano_mail_send($form_values, $flag = null ) {
+  global $user;
+  $module = 'pecano';
+  $mails = explode(',', variable_get('pecano_list_mail'));
+  switch ($flag) {
+    case 'registrar_consulta':
+      $error_mensaje = t("Disculpe en estos momentos no pordemos recibir su consulta");
+      $success_mensaje = t("Hemos recibido su consulta, en breve le enviaremos una respuesta.");
+      $msg = "Buen dia:\n ";
+      $msg .= "Una nueva consulta pendiente de respuesta en este momento \n\t";
+      $msg .= drupal_html_to_text($form_values['values']['contenido_consulta']);
+      $msg .= "\nPara responder a esta consulta dirijase a: \n\t";
+      $msg .= url("node/" . $form_values['values']['new_nid'], array('absolute' => TRUE));
+      $params = array(
+        'subject' => drupal_html_to_text($form_values['values']['titulo_consulta']),
+        'body' => $msg,
+        'form_id' => $form_values['values']['form_id'],
+        );
+      break;
+    case 'admin_consulta':
+      $error_mensaje = t("Error en el envio de mensajes, contacte con el administrador del sitio");
+      $success_mensaje = t("Todos los miembros de esta lista han sido notificados de los cambios");
+      $params = array(
+        'subject' => 'Nueva actividad asignada en pecano.pe!!',
+        'body' => variable_get('pecano_list_mail_message'),
+        );
+      break;
+  }
+  $from = $user->mail;
+  $language = language_default();
+  $send = TRUE;
+  $key = 'pecano_mensaje';
+  foreach ($mails as $mail) {
+    $to = $mail;
+    $result = drupal_mail($module, $key, $to, $language, $params, $from, $send);
+    if ($result['result'] == TRUE) {
+      drupal_set_message($success_mensaje);
+    }
+    else {
+      drupal_set_message($error_mensaje, 'error');
+    }
+    dpm($params);
+  }
+}
+/*
+ * Implements hook_permission.
+ */
+function pecano_permission() {
+  return array(
+    'access pecano admin' => array(
+      'title' => t('Access Management Pecano'),
+      'description' => t('Selected roles will Access Managment Pecano functionality.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_variable_info.
+ */
+function pecano_variable_info($options) {
+  $variable['pecano_list_mail'] = array(
+    'title' => t('Lista de emails'),
+    'description' => t('Lista de correos asignada para la respuesta automatica de consultas'),
+    'type' => 'string',
+    'localize' => true,
+    );
+  $variable['pecano_list_mail_message'] = array(
+    'title' => t('Cuerpo del mensaje que se ha enviado a las personas que contestaran las contultas'),
+    );
+  return $variable;
+}
+
+/**
+ * Implements hook_views_query_alter.
+ */
+function pecano_views_query_alter(&$view, $query) {
+  if ($view->name == 'consultas_realizadas') {
+    global $user;
+    $condition = array(
+      'field' => 'node.uid',
+      'value' => $user->uid,
+      'operator' => '='
+    );
+    $query->where[1]['conditions'][] = $condition;
+  }
+}

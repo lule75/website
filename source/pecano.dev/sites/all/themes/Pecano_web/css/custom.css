@@ -1,0 +1,49 @@
+/*=======================================================================
+*** PORTO_SUB STYLE SHEET***
+========================================================================*/
+
+#block-views-soluciones-home-block {
+	width: 1170px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#block-views-testimonios-home-block {
+	width: 1170px;
+	margin: 0 auto;
+
+}
+.views-home-testimonios-body p {
+	width: 400px;
+}
+.views-home-testimonios-image {
+
+}
+
+.contact-form div .form-item-mail {
+	margin-left: 0px;
+}
+
+.contact-form div .form-item-subject {
+	width: 270px;
+	margin-left: 0px;
+}
+
+.datos-usuario {
+	width: 200px;
+	border-style: solid;
+	background: rgba(250, 250, 250, 0.7);
+	position: fixed;
+	top: 80px;
+	z-index: 100;
+}
+#datos-usuario-cerrar {
+	float: right;
+}
+.mostrar {
+	display: block;
+}
+.ocultar {
+	display: none;
+}

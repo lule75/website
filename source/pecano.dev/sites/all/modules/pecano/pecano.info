@@ -1,0 +1,7 @@
+name=Pecano
+project=pecano
+decription=Modulo personalizado para pecano Peru.
+core=7.x
+package=Pecano
+files[]=pecano.module
+files[]=pecano.install

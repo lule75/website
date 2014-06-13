@@ -1,0 +1,35 @@
+Hola Pedro,
+Continuando con las coordinaciones del proyecto en Drupal.
+Hay que implementar lo siguiente:
+
+Registro de las acciones del usuario
+Cuando el usuario inicie sesión, la web debe registrar en la Bd todas sus acciones, las cuales por el momento son:
+. Inicio de sesión
+. Cerrar sesión
+. Visita de página (cualquier web del dominio)
+. Visualización de vídeo
+. Llenado de encuesta
+. Chat
+. Etc.
+
+Notas:
+Las acciones se van a crear según el tipo de recurso al que acceda el visitante.
+Estas acciones deben ser registros de la tabla: "AccionWeb", con los campos:
+. idAccionWeb (clave primaria)
+. nomAccionWeb, nombre de la acción (chat, inicio de sesión, etc)
+
+Las acciones que realice el usuario deben quedar registradas en la tabla "AccionUsuario", que tiene los siguientes campos:
+. idAccionUsuario (clave primaria)
+. idUsuario (relacionada a la tabla Usuario de Drupal),
+. IdAccionWeb (relacionado a la tabla AccionWeb)
+. fechaHoraInicio, en que inició a ver el recurso.
+. fechaHoraFin, en que dejó de ver el recurso.
+. IpWan, desde el cual accedió a la web
+
+Adicionalmente, me gustaría que me asesores que opciones nos ofrece Drupal para implementar en la web:
+. Chat
+. Encuestas
+
+Cualquier consulta le pides a Olga o alguien de la oficina que te comuniquen conmigo de estar fuera.
+
+Gracias

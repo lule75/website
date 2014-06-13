@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * Implements hook_node_access().
+ */
+function helper_node_access($node, $op, $account) {
+  $type = is_string($node) ? $node : $node->type;
+  
+  if ($op == 'view') {
+    if (!user_access(nodetype_access_get_permission($node->type), $account)) {
+   		drupal_set_message("Registrese y disfrute de nuestros contenidos.", "success");
+      drupal_goto("user/register");
+    }
+  }
+  /*
+   *if (in_array($type, node_permissions_get_configured_types())) {
+   *  if ($op == 'create' && user_access('create ' . $type . ' content', $account)) {
+   *    return NODE_ACCESS_ALLOW;
+   *  }
+   *
+   *  if ($op == 'update') {
+   *    if (user_access('edit any ' . $type . ' content', $account) || (user_access('edit own ' . $type . ' content', $account) && ($account->uid == $node->uid))) {
+   *      return NODE_ACCESS_ALLOW;
+   *    }
+   *  }
+   *
+   *  if ($op == 'delete') {
+   *    if (user_access('delete any ' . $type . ' content', $account) || (user_access('delete own ' . $type . ' content', $account) && ($account->uid == $node->uid))) {
+   *      return NODE_ACCESS_ALLOW;
+   *    }
+   *  }
+   *}
+   */
+  /* Your code here */
+
+  // Returning nothing from this function would have the same effect.
+  /*
+  print_r($node);
+  print("<br><br><br><br><br><br><br><br><br><br><br><br>");
+  print_r($op);
+  print("<br><br><br><br><br><br><br><br><br><br><br><br>");
+  print_r($account);
+  print("<br><br><br><br><br><br><br><br><br><br><br><br>");
+ */
+  return NODE_ACCESS_IGNORE;
+}
