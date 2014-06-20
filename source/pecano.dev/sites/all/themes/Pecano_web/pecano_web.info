@@ -5,7 +5,7 @@ engine = phptemplate
 
 base theme = porto
 
-files[] = js/my_script.js
+scripts[] = js/my_script.js
 
 ; Call style sheets.
 stylesheets[all][] = css/custom.css

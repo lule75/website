@@ -402,11 +402,11 @@ function pecano_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_admin_permissions' && !in_array('administrator', $user->roles)) {
     drupal_goto('admin/people');
   }
-  if ($form_id == 'user_profile_form' && !in_array('administrator', $user->roles)) {
+  //no dejamos que ningun usuario pueda editar sus datos a menos que sea moderador.
+  if ($form_id == 'user_profile_form' && 
+    !(in_array('administrator', $user->roles) || in_array('Moderador', $user->roles)) ) {
     drupal_goto("user/$user->uid");
   }
-
-
 }
 
 /**
@@ -414,5 +414,5 @@ function pecano_form_alter(&$form, &$form_state, $form_id) {
 */
 function pecano_views_pre_render($view)
 {
-   dpm($view);
+
 }

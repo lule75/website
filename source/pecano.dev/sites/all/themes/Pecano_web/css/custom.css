@@ -47,3 +47,24 @@
 .ocultar {
 	display: none;
 }
+#views_slideshow_cycle_teaser_section_soluciones_home-block .views-slideshow-cycle-main-frame-row-item {
+	float: left;
+	width: 25%;
+	margin-left: 5%;
+
+}
+body.sticky-menu-active header #site-name{
+	  margin: 2px 0px 0px 0px;
+}
+@media (max-width: 767px){
+	#views_slideshow_cycle_teaser_section_soluciones_home-block .views-slideshow-cycle-main-frame-row-item {
+		margin: 0 auto;
+		width: 100%;
+		display: block;
+		clear: both;
+		text-align: center;
+	}
+	#block-views-soluciones-home-block{
+		width: 100%
+	}
+}
