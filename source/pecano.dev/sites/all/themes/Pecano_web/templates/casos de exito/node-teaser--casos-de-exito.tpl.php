@@ -2,7 +2,6 @@
 	<div class="span3">
 		<article>
 			<h4><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
-			<p>esto es una prueba tpl</p>
 			<p>
 				<?php $teaser = strip_tags(render($content['body'])); ?> 
 				<?php echo substr($teaser, 0, 250)."...";?>
