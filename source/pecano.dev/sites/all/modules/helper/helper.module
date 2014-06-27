@@ -4,7 +4,7 @@
  * Implements hook_node_access().
  */
 function helper_node_access($node, $op, $account) {
-  $type = is_string($node) ? $node : $node->type;
+    /*$type = is_string($node) ? $node : $node->type;
   
   if ($op == 'view') {
     if (!user_access(nodetype_access_get_permission($node->type), $account)) {
@@ -12,6 +12,7 @@ function helper_node_access($node, $op, $account) {
       drupal_goto("user/register");
     }
   }
+
   /*
    *if (in_array($type, node_permissions_get_configured_types())) {
    *  if ($op == 'create' && user_access('create ' . $type . ' content', $account)) {
@@ -41,6 +42,6 @@ function helper_node_access($node, $op, $account) {
   print("<br><br><br><br><br><br><br><br><br><br><br><br>");
   print_r($account);
   print("<br><br><br><br><br><br><br><br><br><br><br><br>");
- */
-  return NODE_ACCESS_IGNORE;
+
+  return NODE_ACCESS_IGNORE; */
 }

@@ -10,7 +10,7 @@
 		</div>
 	<?php endif; ?>
 	<?php  if(isset($content['field_imagenes']) || !$is_front):?>
-	<div class="span6">
+	<div class="span6 flexslider-simple">
 	<?php else: ?>
 	<div class="span3">
 	<?php endif; ?>

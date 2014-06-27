@@ -78,3 +78,34 @@ body.sticky-menu-active header #site-name{
 	float: left;
 }
 /*FIN CASOS DE EXITO*/
+
+/*ARROW PARA EL SLIDE SOLUIONES */
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_previous,
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_next {
+	background: url(../img/md-arrow.png) no-repeat 0 0;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+	z-index: 100;
+}
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_previous {
+	left: 10px;
+}
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_previous a,
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_next a {
+	opacity: 0;
+}
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_next {
+	right: 10px;
+	background-position: -40px 0;
+}
+#views_slideshow_controls_text_soluciones_home-block .views_slideshow_controls_text_pause {
+	display: none;
+}
+#block-views-soluciones-home-block {
+	position: relative;
+}
+/*END ARROW SOLUCIONES HOME*/

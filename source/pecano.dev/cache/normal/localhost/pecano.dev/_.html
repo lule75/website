@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 ie" lang="es" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie" lang="es" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie" lang="es" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html class="" lang="es" dir="ltr"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="http://localhost/pecano.dev/sites/all/themes/Pecano_web/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Software PECANO | El ERP de vanguardia para gestionar sus <br>procesos de manera integrada.</title>
+<style type="text/css" media="all">@import url("http://localhost/pecano.dev/modules/system/system.base.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/system/system.menus.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/system/system.messages.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/system/system.theme.css?n7ulsi");</style>
+<style type="text/css" media="screen">@import url("http://localhost/pecano.dev/sites/all/modules/views_slideshow/views_slideshow.css?n7ulsi");</style>
+<style type="text/css" media="all">@import url("http://localhost/pecano.dev/modules/comment/comment.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/field/theme/field.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/node/node.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/search/search.css?n7ulsi");
+@import url("http://localhost/pecano.dev/modules/user/user.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/views/css/views.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/ckeditor/css/ckeditor.css?n7ulsi");</style>
+<style type="text/css" media="all">@import url("http://localhost/pecano.dev/sites/all/modules/ctools/css/ctools.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/md_slider/css/animate.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/md_slider/css/md-slider.css?n7ulsi");</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.md-layer-1-0-0{z-index:998 !important;color:#f5f0f5 !important;font-size:3.3333333333333em;font-weight:700;font-family:Verdana;}.md-layer-1-0-1{z-index:999 !important;color:#c91100 !important;font-size:4.1666666666667em;font-weight:700;font-family:Verdana;}.md-layer-1-0-2{z-index:1000 !important;color:#0827d6 !important;font-size:1.6666666666667em;font-weight:700;font-family:Verdana;}.md-layer-1-1-0{z-index:996 !important;font-size:5em;font-weight:700;font-family:Trebuchet MS;}.md-layer-1-1-1{z-index:997 !important;font-size:4.1666666666667em;font-family:Trebuchet MS;}.md-layer-1-1-2{z-index:998 !important;font-size:3.3333333333333em;}.md-layer-1-1-3{z-index:999 !important;font-size:3.3333333333333em;}.md-layer-1-1-4{z-index:1000 !important;font-size:3.3333333333333em;}.md-layer-1-2-0{z-index:998 !important;font-size:4.1666666666667em;font-weight:700;font-family:Georgia;}.md-layer-1-2-1{z-index:999 !important;font-size:3.3333333333333em;font-family:Georgia;}.md-layer-1-2-2{z-index:1000 !important;font-size:3.3333333333333em;font-family:Georgia;}.md-layer-1-3-0{z-index:998 !important;font-size:6.6666666666667em;font-weight:700;font-family:Georgia;}.md-layer-1-3-1{z-index:999 !important;font-size:3.3333333333333em;}.md-layer-1-3-2{z-index:1000 !important;font-size:3.3333333333333em;}
+
+/*]]>*/-->
+</style>
+<style type="text/css" media="all">@import url("http://localhost/pecano.dev/sites/all/modules/md_slider/css/md-slider-style.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/views_slideshow/views_slideshow_controls_text.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/views_slideshow_cycle.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/modules/contact_form_blocks/contact_form_blocks.css?n7ulsi");</style>
+<style type="text/css" media="all">@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/bootstrap.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/fonts/font-awesome/css/font-awesome.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/vendor/flexslider/flexslider.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/vendor/prettyPhoto/css/prettyPhoto.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/vendor/circle-flip-slideshow/css/component.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/vendor/magnific-popup/magnific-popup.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/vendor/isotope/jquery.isotope.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/theme.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/drupal-styles.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/theme-elements.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/theme-animate.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/theme-blog.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/bootstrap-responsive.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Porto/css/theme-responsive.css?n7ulsi");
+@import url("http://localhost/pecano.dev/sites/all/themes/Pecano_web/css/custom.css?n7ulsi");</style>
+<link type="text/css" rel="stylesheet" href="http://localhost/pecano.dev/sites/default/files/less/BUrBPupaDtENHO7qmCs1ryZsFJF1FoUixNuJOwhFMk8/sites/all/themes/Porto/css/less/skin.7pUxF1VFV-0nUPOJkV8s2VnoUq5jqCH01kDDxklPME4.css?n7ulsi" media="all" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/pecano.dev/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://localhost/pecano.dev/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/misc/drupal.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/views_slideshow/js/views_slideshow.js?v=1.0"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/default/files/languages/es_bar3b73MI-mox1BSZNLLkUsE68SfUeGIXYRmbGgF6Yo.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/md_slider/js/jquery.touchwipe.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/md_slider/js/mdvideobox.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/md_slider/js/modernizr.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/md_slider/js/jquery.easing.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/md_slider/js/md-slider.js?n7ulsi"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function($) {
+      $(document).ready(function() {
+          effectsIn = Drupal.settings.inEffects;
+          effectsOut = Drupal.settings.outEffects;
+          var options = Drupal.settings.md_slider_options_1;
+          $('#md-slider-1-block').mdSlider(options);
+      });
+    })(jQuery);
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://localhost/pecano.dev/misc/textarea.js?v=7.28"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/js/views_slideshow_cycle.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/libraries/jquery.cycle/jquery.cycle.all.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/modules/google_analytics/googleanalytics.js?n7ulsi"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-52111143-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/modernizr.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/bootstrap.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.easing.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.cookie.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/includes/twitter/jquery.tweet.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/flexslider/jquery.flexslider.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/circle-flip-slideshow/js/jquery.flipshow.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/isotope/jquery.isotope.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/prettyPhoto/js/jquery.prettyPhoto.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jflickrfeed/jflickrfeed.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.mapmarker.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.stellar.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.gmap.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/magnific-popup/magnific-popup.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.validate.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/vendor/jquery.appear.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/js/mobile-menu.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/js/plugins.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Porto/js/porto.js?n7ulsi"></script>
+<script type="text/javascript" src="http://localhost/pecano.dev/sites/all/themes/Pecano_web/js/my_script.js?n7ulsi"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/pecano.dev\/","pathPrefix":"","ajaxPageState":{"theme":"pecano_web","theme_token":"c8e1cHMYTbyz-2z_DWv2ARPr-m1aZfQnGpt_hBORa_g","js":{"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.8.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"public:\/\/languages\/es_bar3b73MI-mox1BSZNLLkUsE68SfUeGIXYRmbGgF6Yo.js":1,"sites\/all\/modules\/md_slider\/js\/jquery.touchwipe.js":1,"sites\/all\/modules\/md_slider\/js\/mdvideobox.js":1,"sites\/all\/modules\/md_slider\/js\/modernizr.js":1,"sites\/all\/modules\/md_slider\/js\/jquery.easing.js":1,"sites\/all\/modules\/md_slider\/js\/md-slider.js":1,"1":1,"misc\/textarea.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/Porto\/vendor\/modernizr.js":1,"sites\/all\/themes\/Porto\/vendor\/bootstrap.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.easing.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.cookie.js":1,"sites\/all\/themes\/Porto\/includes\/twitter\/jquery.tweet.js":1,"sites\/all\/themes\/Porto\/vendor\/flexslider\/jquery.flexslider.js":1,"sites\/all\/themes\/Porto\/vendor\/circle-flip-slideshow\/js\/jquery.flipshow.js":1,"sites\/all\/themes\/Porto\/vendor\/isotope\/jquery.isotope.js":1,"sites\/all\/themes\/Porto\/vendor\/prettyPhoto\/js\/jquery.prettyPhoto.js":1,"sites\/all\/themes\/Porto\/vendor\/jflickrfeed\/jflickrfeed.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.mapmarker.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.stellar.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.gmap.js":1,"sites\/all\/themes\/Porto\/vendor\/magnific-popup\/magnific-popup.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.validate.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.appear.js":1,"sites\/all\/themes\/Porto\/js\/mobile-menu.js":1,"sites\/all\/themes\/Porto\/js\/plugins.js":1,"sites\/all\/themes\/Porto\/js\/porto.js":1,"sites\/all\/themes\/Pecano_web\/js\/my_script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/md_slider\/css\/animate.css":1,"sites\/all\/modules\/md_slider\/css\/md-slider.css":1,"0":1,"sites\/all\/modules\/md_slider\/css\/md-slider-style.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow_controls_text.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/contact_form_blocks\/contact_form_blocks.css":1,"sites\/all\/themes\/Porto\/css\/bootstrap.css":1,"sites\/all\/themes\/Porto\/css\/fonts\/font-awesome\/css\/font-awesome.css":1,"sites\/all\/themes\/Porto\/vendor\/flexslider\/flexslider.css":1,"sites\/all\/themes\/Porto\/vendor\/prettyPhoto\/css\/prettyPhoto.css":1,"sites\/all\/themes\/Porto\/vendor\/circle-flip-slideshow\/css\/component.css":1,"sites\/all\/themes\/Porto\/vendor\/magnific-popup\/magnific-popup.css":1,"sites\/all\/themes\/Porto\/vendor\/isotope\/jquery.isotope.css":1,"sites\/all\/themes\/Porto\/css\/theme.css":1,"sites\/all\/themes\/Porto\/css\/drupal-styles.css":1,"sites\/all\/themes\/Porto\/css\/theme-elements.css":1,"sites\/all\/themes\/Porto\/css\/theme-animate.css":1,"sites\/all\/themes\/Porto\/css\/theme-blog.css":1,"sites\/all\/themes\/Porto\/css\/bootstrap-responsive.css":1,"sites\/all\/themes\/Porto\/css\/theme-responsive.css":1,"sites\/all\/themes\/Pecano_web\/css\/custom.css":1,"sites\/all\/themes\/Porto\/css\/less\/skin.less":1}},"inEffects":["bounceIn","bounceInDown","bounceInUp","bounceInLeft","bounceInRight","fadeIn","fadeInUp","fadeInDown","fadeInLeft","fadeInRight","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig","flipInX","flipInY","foolishIn","lightSpeedIn","puffIn","rollIn","rotateIn","rotateInDownLeft","rotateInDownRight","rotateInUpLeft","rotateInUpRight","twisterInDown","twisterInUp","swap","swashIn","tinRightIn","tinLeftIn","tinUpIn","tinDownIn","vanishIn"],"outEffects":["bombRightOut","bombLeftOut","bounceOut","bounceOutDown","bounceOutUp","bounceOutLeft","bounceOutRight","fadeOut","fadeOutUp","fadeOutDown","fadeOutLeft","fadeOutRight","fadeOutUpBig","fadeOutDownBig","fadeOutLeftBig","fadeOutRightBig","flipOutX","flipOutY","foolishOut","hinge","holeOut","lightSpeedOut","puffOut","rollOut","rotateOut","rotateOutDownLeft","rotateOutDownRight","rotateOutUpLeft","rotateOutUpRight","rotateDown","rotateUp","rotateLeft","rotateRight","swashOut","tinRightOut","tinLeftOut","tinUpOut","tinDownOut","vanishOut"],"md_slider_options_1":{"fullwidth":false,"transitionsSpeed":800,"width":"1170","height":"420","enableDrag":true,"responsive":true,"loop":true,"showLoading":true,"loadingPosition":"bottom","showArrow":true,"showBullet":true,"posBullet":"2","showThumb":true,"posThumb":"1","slideShowDelay":"8000","slideShow":true,"styleBorder":"0","styleShadow":"0","videoBox":false},"viewsSlideshow":{"soluciones_home-block":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0},"casos_de_exito-block":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowControls":{"soluciones_home-block":{"bottom":{"type":"viewsSlideshowControlsText"}}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_soluciones_home-block":{"num_divs":11,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"soluciones_home-block","effect":"scrollHorz","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":3,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"},"#views_slideshow_cycle_main_casos_de_exito-block":{"num_divs":4,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"casos_de_exito-block","effect":"scrollHorz","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":2,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"viewsSlideshowPager":{"casos_de_exito-block":{"bottom":{"type":"0"}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+  
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <!--[if IE]>
+		<link rel="stylesheet" href="/pecano.dev/sites/all/themes/Porto/css/ie.css">
+	<![endif]-->
+
+	<!--[if lte IE 8]>
+		<script src="/pecano.dev/sites/all/themes/Porto/vendor/respond.js"></script>
+	<![endif]-->
+
+	<!-- Web Fonts  -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+	<script src="//maps.google.com/maps/api/js?sensor=false"></script>
+	
+		
+		
+<!-- User defined CSS --><style type='text/css'></style><!-- End user defined CSS -->  
+<script type='text/javascript' src='/pecano.dev/sites/all/themes/Porto/vendor/modernizr.js'></script>
+</head>
+
+<body class="html front not-logged-in no-sidebars page-node">
+
+<div class="body">
+  <header>
+    <div class="container">
+
+      	        <div class="region region-branding">
+    <div id="block-block-8" class="block block-block">
+
+    
+  <div class="content">
+    <div class="social-icons">
+  <ul class="social-icons">
+    <li class="facebook"><a href="http://www.facebook.com" target="_blank" title="Facebook"></a></li>
+    <li class="twitter"><a href="http://www.twitter.com" target="_blank" title="Twitter"></a></li>
+    <li class="linkedin"><a href="http://www.linkedin.com" target="_blank" title="Linkedin"></a></li>
+  </ul>
+</div>  </div>
+</div>
+  </div>
+	        
+              <div class="logo">
+		      <a href="/pecano.dev/" title="Inicio" rel="home" id="logo">
+		        <img src="http://localhost/pecano.dev/sites/all/themes/Pecano_web/logo.png" alt="Inicio" />
+		      </a>
+        </div>
+	    	    
+	    	      <div id="name-and-slogan">
+	
+	        	          		          <h1 id="site-name">
+		            <a href="/pecano.dev/" title="Inicio" rel="home"><span>Software PECANO</span></a>
+		          </h1>
+	          	        	
+	        	          <div id="site-slogan" class="hidden">
+	            El ERP de vanguardia para gestionar sus <br>procesos de manera integrada.	          </div>
+	        	
+	      </div> <!-- /#name-and-slogan -->
+	    
+      <!-- /branding --> 
+      <div id="header-top">
+          <div class="region region-header-top">
+    <div id="block-block-7" class="block block-block">
+
+    
+  <div class="content">
+    <div class="acceso-block">
+  <ul class="nav nav-pills nav-top">
+    <li><a href="/pecano.dev/user">Login</a></li>
+    <li><a href="/pecano.dev/user/register">Register</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+  </div>
+      </div>
+            <nav>
+          <div class="region region-header-menu">
+    <div id="block-system-main-menu" class="block block-system block-menu">
+
+    
+  <div class="content">
+    <ul class="nav nav-pills nav-main porto-nav"><li class="active"><a href="/pecano.dev/" class="active">Home</a></li><li class="dropdown active"><a href="/pecano.dev/" title="" class="active">Nosotros</a><ul class="dropdown-menu porto-nav"><li><a href="/pecano.dev/filosofia">Filosofia</a></li><li><a href="/pecano.dev/mision-0">Mision</a></li><li><a href="/pecano.dev/vision">Vision</a></li></ul></li><li><a href="/pecano.dev/soluciones" title="">Soluciones</a></li><li class="dropdown active"><a href="/pecano.dev/" title="" class="active">Servicios</a><ul class="dropdown-menu porto-nav"><li><a href="/pecano.dev/asesoria">Asesoria</a></li><li><a href="/pecano.dev/implementacion">Implementacion</a></li><li><a href="/pecano.dev/soporte-post-venta">Soporte post Venta</a></li></ul></li><li class="active"><a href="/pecano.dev/" title="" class="active">Mesa de ayuda</a></li><li><a href="/pecano.dev/casos-de-exito">Casos de exito</a></li><li><a href="/pecano.dev/contact" title="">Contactenos</a></li></ul>  </div>
+</div>
+  </div>
+      </nav>
+      
+    </div>  
+	</header>
+	
+	<div role="main" class="main">
+	
+	  	  
+	    <div class="region region-before-content">
+    <div id="block-md-slider-1" class="block block-md-slider">
+
+    
+  <div class="content">
+    <div id="md-slider-1-block" class="md-slide-items" data-thumb-width='100' data-thumb-height='75'>
+          <div class="md-slide-item slide-1" data-timeout='8000' data-transition="strip-right-left-up" data-thumb='http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_thumb/public/La%20mejor%20solucion.jpg?itok=k_TPG5K8'>
+    <div class="md-mainimg"><img src="http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_bg/public/La%20mejor%20solucion.jpg?itok=QXOg-_Ty" alt="" /></div>
+    <div class="md-objects">
+          <div  style="opacity: 0.8;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=80);filter: alpha(opacity=80);">
+  <div class="md-object md-layer-1-0-0" data-x='16' data-y='16' data-width='496' data-height='95' data-start='0' data-stop='8000' data-easein='random' data-easeout='fadeOut'>
+                        Adquiera un sistema que a todos beneficie              </div>
+</div>
+          <div  style="opacity: 0.9;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=90);filter: alpha(opacity=90);">
+  <div class="md-object md-layer-1-0-1" data-x='458' data-y='131' data-width='362' data-height='60' data-start='1000' data-stop='8000' data-easein='flipInX' data-easeout='flipOutY'>
+                        PECANO ERP              </div>
+</div>
+          <div  style="opacity: 0.8;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=80);filter: alpha(opacity=80);">
+  <div class="md-object md-layer-1-0-2" data-x='545' data-y='187' data-width='170' data-height='31' data-start='6000' data-stop='8000' data-easein='rotateInDownLeft' data-easeout='foolishOut'>
+                        ERP BUSINESS              </div>
+</div>
+        </div>
+</div>
+          <div class="md-slide-item slide-2" data-timeout='8000' data-transition="slit-vertical-down,strip-down-left,strip-right-up" data-thumb='http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_thumb/public/10203471_l.jpg?itok=f40piOUb'>
+    <div class="md-mainimg"><img src="http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_bg/public/10203471_l.jpg?itok=I3iswcpI" alt="" /></div>
+    <div class="md-objects">
+            <div class="md-object md-layer-1-1-0" data-x='67' data-y='33' data-width='591' data-height='70' data-start='500' data-stop='8000'>
+                        Nuestra experiencia              </div>
+            <div class="md-object md-layer-1-1-1" data-x='495' data-y='103' data-width='455' data-height='53' data-start='1000' data-stop='8000'>
+                        Garantiza el exito              </div>
+            <div class="md-object md-layer-1-1-2" data-x='172' data-y='178' data-width='477' data-height='50' data-start='2000' data-stop='8000'>
+                        . Las mejores practicas              </div>
+            <div class="md-object md-layer-1-1-3" data-x='186' data-y='239' data-width='459' data-height='46' data-start='3000' data-stop='8000'>
+                        . Equipo especializado              </div>
+            <div class="md-object md-layer-1-1-4" data-x='203' data-y='297' data-width='452' data-height='38' data-start='2000' data-stop='8000'>
+                        . Soporte de por vida              </div>
+        </div>
+</div>
+          <div class="md-slide-item slide-3" data-timeout='8000' data-transition="strip-down-right,strip-up-down-right,bottom-curtain" data-thumb='http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_thumb/public/22041802_ml.jpg?itok=0nhEMCq7'>
+    <div class="md-mainimg"><img src="http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_bg/public/22041802_ml.jpg?itok=zUizABNM" alt="" /></div>
+    <div class="md-objects">
+            <div class="md-object text-white-shadow md-layer-1-2-0" data-x='127' data-y='72' data-width='319' data-height='54' data-start='1000' data-stop='8000' data-easein='fadeInUp' data-easeout='random'>
+                        Conexión              </div>
+            <div class="md-object md-layer-1-2-1" data-x='220' data-y='135' data-width='398' data-height='58' data-start='2100' data-stop='8000'>
+                        Servidor Local              </div>
+            <div class="md-object md-layer-1-2-2" data-x='220' data-y='204' data-width='331' data-height='46' data-start='3000' data-stop='8000'>
+                        Datos en la Nube              </div>
+        </div>
+</div>
+          <div class="md-slide-item slide-4" data-timeout='8000' data-transition="slit-vertical-up,top-curtain,fade" data-thumb='http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_thumb/public/fotolia_64141502.jpg?itok=ozS-M9s5'>
+    <div class="md-mainimg"><img src="http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_bg/public/fotolia_64141502.jpg?itok=OxPQmiSD" alt="" /></div>
+    <div class="md-objects">
+            <div class="md-object md-layer-1-3-0" data-x='42' data-y='42' data-width='1028' data-height='71' data-start='1000' data-stop='8000' data-easein='twisterInUp' data-easeout='rotateDown'>
+                        Declaraciones a SUNAT              </div>
+            <div class="md-object md-layer-1-3-1" data-x='181' data-y='177' data-width='493' data-height='56' data-start='2000' data-stop='8000' data-easein='fadeInDown' data-easeout='flipOutX'>
+                        Informacion en tiempo real              </div>
+            <div class="md-object md-layer-1-3-2" data-x='206' data-y='250' data-width='483' data-height='55' data-start='3000' data-stop='8000' data-easein='rotateInUpRight' data-easeout='rotateUp'>
+                        contabilidad en un click!!              </div>
+        </div>
+</div>
+          <div class="md-slide-item slide-5" data-timeout='8000' data-transition="strip-right-down,right-curtain,slide-in-up" data-thumb='http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_thumb/public/fotolia_50541222.jpg?itok=aRGgv5hl'>
+    <div class="md-mainimg"><img src="http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_bg/public/fotolia_50541222.jpg?itok=pHXbuLCy" alt="" /></div>
+    <div class="md-objects">
+        </div>
+</div>
+          <div class="md-slide-item slide-6" data-timeout='8000' data-thumb='http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_thumb/public/fotolia_56032810.jpg?itok=Cl7eJ-mo'>
+    <div class="md-mainimg"><img src="http://localhost/pecano.dev/sites/default/files/styles/md_slider_1_bg/public/fotolia_56032810.jpg?itok=543F6i0r" alt="" /></div>
+    <div class="md-objects">
+        </div>
+</div>
+    </div>
+
+  </div>
+</div>
+<div id="block-views-soluciones-home-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-soluciones-home view-id-soluciones_home view-display-id-block soluciones-home-items3 view-dom-id-2c96fe9cd040ab86b8c0b41a1c57701e">
+        
+  
+  
+      <div class="view-content">
+        <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_soluciones_home-block" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_soluciones_home-block" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_soluciones_home-block_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/interconexi%C3%B3n-sin-dependencia">Interconexión sin dependencia</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Solución diseñada principalmente para empresas que cuentan con puntos de venta en diferentes lugares geograficos y que requieren centralizar su informacion en una oficina principal, sin depender del internet de forma constante.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/interconexi%C3%B3n-sin-dependencia"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/conexion_cuadro.gif?itok=4--WMyem" width="211" height="220" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/pecano-movil">Pecano Movil</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Es la solución basada en plataforma web para dispositivos móviles (Smartphone, tablets, etc.) que Pecano ofrece a los empresarios para consultar la informacion de su empresa desde cualquier lugar.</p>
+</p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/pecano-movil"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/mobile.png?itok=BIFJ34ui" width="220" height="139" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/mensajeria-electr%C3%B3nica">Mensajeria Electrónica</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Conjunto de herramientas que permite a los clientes internos y externos de la empresa acceder a la informacion de su interés en el momento mismo que ocurren los hechos a través de correos electronicos.</p>
+</p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/mensajeria-electr%C3%B3nica"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/rrhh.jpg?itok=oL5pEVG3" width="220" height="165" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_soluciones_home-block_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/fidelizaci%C3%B3n-de-clientes">Fidelización de clientes</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>PECANO permite fidelizar a los clientes como estrategia de marketing, permitiendo conseguir una relación estable y duradera con ellos.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/fidelizaci%C3%B3n-de-clientes"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/fidelizacion.jpg?itok=JGjEg8NB" width="220" height="165" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/comercial">Comercial</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Los Procesos comerciales de la empresa se pueden administrar a travéz de PECANO desde el envío de la proforma hasta el despacho de la mercadería, pasando por la emisión del comprobante de pago y toda la casuística del negocio.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/comercial"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/contable_0.jpg?itok=h_0rnwgJ" width="220" height="165" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/logistico">Logistico</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>PECANO pone a disposición herramientas qeu permiten llevar el control de todo el flujo logistico de la empresa, desde el requerimiento y órdenes de compra hasta la llegada de la mercaderia y su conprobante de pago.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/logistico"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/logistico_comercial_0.jpg?itok=R2LvgXII" width="220" height="165" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_soluciones_home-block_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/punto-de-venta-eess-grifos">Punto de Venta EESS / GRIFOS</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Modulo diseñado para que el vendedor de playa realice todas sus funciones de manera fácil y rápida.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/punto-de-venta-eess-grifos"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/rrhh.jpg?itok=oL5pEVG3" width="220" height="165" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/gestion-de-grifos">Gestion de Grifos</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Modulo diseñado para que el área administrativa de una estación de servicios realice todas sus funciones de gestion y control.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/gestion-de-grifos"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/grifos.jpg?itok=RhnZKIgV" width="220" height="165" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/contable">Contable</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>PECANO genera la contabilidad en tiempo real, evitando que el area contable registre informacion que proviene otras areas, promoviendo funciones de control y análisis, permitiendo la evolucion a una contabilidad gerencial.</p></p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/contable"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/contable.jpg?itok=T6uXLxtf" width="220" height="165" /></a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_soluciones_home-block_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/punto-de-venta-pos">Punto de Venta POS</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p>Módulo diseñado para empresas que realizan atención directa al público, permitiendo agilizar el proceso de las ventas, mediante herramientas útiles para vendedores y cajeros.  Logrando incrementar las ventas y la satisfacción del cliente.</p>
+<p>Se integra con todos los equipos propios de un punto de venta: ticketeras, impresoras, lectores de barra, gavetas de dinero, balanzas de tickets, etc.</p>
+<p>Puede emitir todo tipo de comprobantes de pago respetando la legislacion vigente.</p>
+</p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/punto-de-venta-pos"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/punto_venta.jpg?itok=zsAtuuGh" width="220" height="165" /></a></div>  </div></div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-3 views-row-even span4 block-views-soluciones-home-block">
+    
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="/pecano.dev/solucion/financiero">Financiero</a></h3>  </div>  
+  <div class="views-field views-field-body">        <p class="field-content servicios-view-body"><p><strong>PECANO</strong> otorga total confianza y robustez para la gestión financiera de la empresa, controlando eficientemente todo el flujo del dinero en sus diferentes etapas: Requerimientos, Autorizaciones de Pago, Cuentas por cobrar y/o pagar, Entregas a redir, Caja y Bancos, etc.</p>
+</p>  </div>  
+  <div class="views-field views-field-field-solucion-imagen">        <div class="field-content"><a href="/pecano.dev/solucion/financiero"><img typeof="foaf:Image" src="http://localhost/pecano.dev/sites/default/files/styles/medium/public/financiero.jpg?itok=5-pJyIWh" width="220" height="165" /></a></div>  </div></div>
+</div>
+</div>
+</div>
+          <div class="views-slideshow-controls-bottom clearfix">
+        <div id="views_slideshow_controls_text_soluciones_home-block" class="views-slideshow-controls-text views_slideshow_controls_text">
+  <span id="views_slideshow_controls_text_previous_soluciones_home-block" class="views-slideshow-controls-text-previous views_slideshow_controls_text_previous"><a href="#">Previous</a></span>
+  <span id="views_slideshow_controls_text_pause_soluciones_home-block" class="views-slideshow-controls-text-pause views_slideshow_controls_text_pause  views-slideshow-controls-text-status-play"><a href="#">Pause</a></span>
+  <span id="views_slideshow_controls_text_next_soluciones_home-block" class="views-slideshow-controls-text-next views_slideshow_controls_text_next"><a href="#">Siguiente</a></span>
+</div>
+      </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+	  <div id="content" class="content full">
+	    <div class="container">
+	      <div class="row">
+	      
+			    			
+					<div class="span12">
+					  
+					  					  
+			     				      			      			
+					  					</div>
+			  
+				  			    
+			  </div>
+	    </div>  
+	  </div>  
+ 
+		 
+	  
+	</div>
+
+    <div class="region region-after-content">
+    <div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+  <section class="featured footer map">
+    <div class="container">
+      <div class="row">
+        <div class="span6">
+         <h2>Casos de <strong>ÉXITO</strong></h2>
+          <div class="view view-casos-de-exito view-id-casos_de_exito view-display-id-block view-dom-id-7bf9b3724ed754f4713ea728a7e7cf87">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_casos_de_exito-block" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_casos_de_exito-block" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_casos_de_exito-block_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first casos-exito-row">
+  <div class="row casos-exito-wrap">
+			<div class="span3">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Ahora puedo analizar los estados financieros de cada sucursal de forma comparativa en cualquier momento</p>
+<p>GINSAC SAC es una empresa con presencia regional que se dedica a la importación y comercialización de maquinarias agícolas.</p>
+</div></div></div><ul class="links inline"><li class="node-readmore first last"><a href="/pecano.dev/caso-de-exito/ginsac-sac" rel="tag" title="GINSAC SAC">Leer más<span class="element-invisible"> sobre GINSAC SAC</span></a></li>
+</ul>	</div>
+</div>	</div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first casos-exito-row">
+  <div class="row casos-exito-wrap">
+			<div class="span3">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>Gracias a Pecano</strong> hemos optimizado la atención a los clientes en nuestros 3 locales incrementando las ventas y la satisfacción de los clientes.</p>
+<p><strong>MAQUIPARTS </strong>es una empresa que importa todo tipo de maquinarias y accesorios para la industria textil.</p>
+</div></div></div><ul class="links inline"><li class="node-readmore first last"><a href="/pecano.dev/caso-de-exito/maquiparts" rel="tag" title="MAQUIPARTS">Leer más<span class="element-invisible"> sobre MAQUIPARTS</span></a></li>
+</ul>	</div>
+</div>	</div>
+</div>
+<div id="views_slideshow_cycle_div_casos_de_exito-block_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even casos-exito-row">
+  <div class="row casos-exito-wrap">
+			<div class="span3">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>Pecano ha permitido askdjaskjdhakjdhakjsdhkasjhd</strong></p>
+</div></div></div><ul class="links inline"><li class="node-readmore first last"><a href="/pecano.dev/caso-de-exito/papelera-general" rel="tag" title="PAPELERA GENERAL">Leer más<span class="element-invisible"> sobre PAPELERA GENERAL</span></a></li>
+</ul>	</div>
+</div>	</div>
+<div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even casos-exito-row">
+  <div class="row casos-exito-wrap">
+			<div class="span3">
+			<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>Con Pecano akdjahkdhaskdhaskdhaskdjhakjsdh</strong></p>
+<p> </p>
+</div></div></div><ul class="links inline"><li class="node-readmore first last"><a href="/pecano.dev/caso-de-exito/grupo-ramirez" rel="tag" title="GRUPO RAMIREZ">Leer más<span class="element-invisible"> sobre GRUPO RAMIREZ</span></a></li>
+</ul>	</div>
+</div>	</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>        </div>
+        <div class="span6">
+          <h2><strong>Que</strong> opinan nuestros clientes.</h2>
+          <div class="row testimonials">
+<div class="flexslider flexslider-top-title unstyled" data-plugin-options='{"controlNav":false, "slideshow": false, "animationLoop": true, "animation":"slide"}'>
+							
+	  	  	  	  	
+	  	
+	  	
+	  	    <ul class="slides">
+	    
+  
+<li>
+	<div class="span6">
+		<blockquote class="testimonial">
+		<p><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+</div></div></div></p>
+		</blockquote>
+		<div class="testimonial-arrow-down"></div>
+		<div class="testimonial-author">
+		  			<div class="thumbnail thumbnail-small">
+								<img src="http://localhost/pecano.dev/sites/default/files/jessica%20alba.jpg" alt="">
+							</div>
+						<p><strong><div class="field field-name-field-testimonio-nombre field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Jessica Alba</div></div></div></strong><span><div class="field field-name-field-testimonio-informacion field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Actriz co.</div></div></div></span></p>
+		</div>
+	</div>
+</li>
+  
+<li>
+	<div class="span6">
+		<blockquote class="testimonial">
+		<p><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+</div></div></div></p>
+		</blockquote>
+		<div class="testimonial-arrow-down"></div>
+		<div class="testimonial-author">
+		  			<div class="thumbnail thumbnail-small">
+								<img src="http://localhost/pecano.dev/sites/default/files/chica.jpg" alt="">
+							</div>
+						<p><strong><div class="field field-name-field-testimonio-nombre field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Nro 18</div></div></div></strong><span><div class="field field-name-field-testimonio-informacion field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Android developer</div></div></div></span></p>
+		</div>
+	</div>
+</li>
+  
+<li>
+	<div class="span6">
+		<blockquote class="testimonial">
+		<p><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+</div></div></div></p>
+		</blockquote>
+		<div class="testimonial-arrow-down"></div>
+		<div class="testimonial-author">
+		  			<div class="thumbnail thumbnail-small">
+								<img src="http://localhost/pecano.dev/sites/default/files/chico.jpg" alt="">
+							</div>
+						<p><strong><div class="field field-name-field-testimonio-nombre field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Hermenegildo Sacasonapa</div></div></div></strong><span><div class="field field-name-field-testimonio-informacion field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">CEO FIFA</div></div></div></span></p>
+		</div>
+	</div>
+</li>
+	    </ul>
+	  	
+	  	
+	  	
+	  	
+	  	
+	  		
+  </div>
+</div>        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  </div>
+</div>
+<div id="block-block-3" class="block block-block">
+
+    
+  <div class="content">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+var map;
+var TILE_SIZE = 256;
+var chicago = new google.maps.LatLng(-12.070488,-77.103146);
+
+function bound(value, opt_min, opt_max) {
+  if (opt_min != null) value = Math.max(value, opt_min);
+  if (opt_max != null) value = Math.min(value, opt_max);
+  return value;
+}
+
+function degreesToRadians(deg) {
+  return deg * (Math.PI / 180);
+}
+
+function radiansToDegrees(rad) {
+  return rad / (Math.PI / 180);
+}
+
+/** @constructor */
+function MercatorProjection() {
+  this.pixelOrigin_ = new google.maps.Point(TILE_SIZE / 2,
+      TILE_SIZE / 2);
+  this.pixelsPerLonDegree_ = TILE_SIZE / 360;
+  this.pixelsPerLonRadian_ = TILE_SIZE / (2 * Math.PI);
+}
+
+MercatorProjection.prototype.fromLatLngToPoint = function(latLng,
+    opt_point) {
+  var me = this;
+  var point = opt_point || new google.maps.Point(0, 0);
+  var origin = me.pixelOrigin_;
+
+  point.x = origin.x + latLng.lng() * me.pixelsPerLonDegree_;
+
+  // Truncating to 0.9999 effectively limits latitude to 89.189. This is
+  // about a third of a tile past the edge of the world tile.
+  var siny = bound(Math.sin(degreesToRadians(latLng.lat())), -0.9999,
+      0.9999);
+  point.y = origin.y + 0.5 * Math.log((1 + siny) / (1 - siny)) *
+      -me.pixelsPerLonRadian_;
+  return point;
+};
+
+MercatorProjection.prototype.fromPointToLatLng = function(point) {
+  var me = this;
+  var origin = me.pixelOrigin_;
+  var lng = (point.x - origin.x) / me.pixelsPerLonDegree_;
+  var latRadians = (point.y - origin.y) / -me.pixelsPerLonRadian_;
+  var lat = radiansToDegrees(2 * Math.atan(Math.exp(latRadians)) -
+      Math.PI / 2);
+  return new google.maps.LatLng(lat, lng);
+};
+
+function createInfoWindowContent() {
+  var numTiles = 1 << map.getZoom();
+  var projection = new MercatorProjection();
+  var worldCoordinate = projection.fromLatLngToPoint(chicago);
+  var pixelCoordinate = new google.maps.Point(
+      worldCoordinate.x * numTiles,
+      worldCoordinate.y * numTiles);
+  var tileCoordinate = new google.maps.Point(
+      Math.floor(pixelCoordinate.x / TILE_SIZE),
+      Math.floor(pixelCoordinate.y / TILE_SIZE));
+
+  return [
+    'Pecano ERP'
+  ].join('<br>');
+}
+
+function initialize() {
+  var mapOptions = {
+    zoom: 15,
+    center: chicago
+  };
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  var coordInfoWindow = new google.maps.InfoWindow();
+  coordInfoWindow.setContent(createInfoWindowContent());
+  coordInfoWindow.setPosition(chicago);
+  coordInfoWindow.open(map);
+
+  google.maps.event.addListener(map, 'zoom_changed', function() {
+    coordInfoWindow.setContent(createInfoWindowContent());
+    coordInfoWindow.open(map);
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+<div id="map-canvas"></div>  </div>
+</div>
+  </div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+    
+      			<div class="footer-ribon">
+				<span><em class="placeholder">Contactenos</em></span>
+			</div>
+      		  
+	    <div class="span3">
+	      			      <div class="region region-footer-1">
+    <div id="block-contact-form-blocks-0" class="block block-contact-form-blocks">
+
+    
+  <div class="content">
+    <form class="user-info-from-cookie contact-form" action="/pecano.dev/" method="post" id="contact-site-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Su nombre <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="60" maxlength="255" class="form-text required" />
+</div>
+<div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail">Su dirección de correo electrónico <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <input type="text" id="edit-mail" name="mail" value="" size="60" maxlength="255" class="form-text required" />
+</div>
+<div class="form-item form-type-textfield form-item-subject">
+  <label for="edit-subject">Asunto <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <input type="text" id="edit-subject" name="subject" value="" size="60" maxlength="255" class="form-text required" />
+</div>
+<div class="form-item form-type-textarea form-item-message">
+  <label for="edit-message">Mensaje <span class="form-required" title="Este campo es obligatorio.">*</span></label>
+ <div class="form-textarea-wrapper resizable"><textarea id="edit-message" name="message" cols="60" rows="5" class="form-textarea required"></textarea></div>
+</div>
+<input type="hidden" name="form_build_id" value="form-QTuftuT3wus3TC7K7VWu2OVyr0iIWSGOlsSr4tnoxPQ" />
+<input type="hidden" name="form_id" value="contact_site_form" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Enviar mensaje" class="btn-primary btn form-submit" /></div></div></form>  </div>
+</div>
+  </div>
+			  	    </div>
+	    
+	    <div class="span3">
+	      			    			  	    </div>
+	    
+	    <div class="span4">
+	      			      <div class="region region-footer-3">
+    <div id="block-block-5" class="block block-block">
+
+    
+  <div class="content">
+    <ul class="contact">
+  <li>
+    <p><i class="icon-map-marker"></i><strong>Calle:</strong> Hernando de Soto N° 348 San Miguel, Lima</p>
+  </li>
+  <li>
+    <p>
+      <i class="icon-phone"></i>
+      <strong>Telefono:</strong> (511) 652-4854 <br />
+      <strong>Cel:</strong> 962857359<br />
+      <strong>RPM:</strong> #962857359/ *342971<br />
+    </p>
+  </li>
+  <li>
+    <p><i class="icon-envelope"></i><strong>E-mail:</strong> <a href="mailto:informes@pecano.pe">informe@pecano.pe</a></p>
+  </li>
+</ul>  </div>
+</div>
+  </div>
+			  	    </div>
+	    
+	    <div class="span2">
+	      			    			  	    </div>
+		    
+		</div>  
+  </div>	
+
+	  <div class="footer-copyright">  
+	    <div class="container">
+	      <div class="row">
+			    <div class="span6">
+			    
+					  					    					  			  
+			    </div>
+			    <div class="span6">
+			    
+					  					    					  			  
+			    </div>
+	      </div>  
+	    </div>
+	  </div>  
+	</footer>
+	
+</div>	</body>
+
+</html>
+<!-- Page cached by Boost @ 2014-06-27 17:23:47, expires @ 2014-06-27 18:23:47, lifetime 1 hora -->
